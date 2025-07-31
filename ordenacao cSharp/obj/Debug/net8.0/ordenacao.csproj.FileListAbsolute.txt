@@ -1,0 +1,14 @@
+C:\Users\laboratorio\Desktop\ordenacao\bin\Debug\net8.0\ordenacao.exe
+C:\Users\laboratorio\Desktop\ordenacao\bin\Debug\net8.0\ordenacao.deps.json
+C:\Users\laboratorio\Desktop\ordenacao\bin\Debug\net8.0\ordenacao.runtimeconfig.json
+C:\Users\laboratorio\Desktop\ordenacao\bin\Debug\net8.0\ordenacao.dll
+C:\Users\laboratorio\Desktop\ordenacao\bin\Debug\net8.0\ordenacao.pdb
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\ordenacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\ordenacao.AssemblyInfoInputs.cache
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\ordenacao.AssemblyInfo.cs
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\ordenacao.csproj.CoreCompileInputs.cache
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\ordenacao.dll
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\refint\ordenacao.dll
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\ordenacao.pdb
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\ordenacao.genruntimeconfig.cache
+C:\Users\laboratorio\Desktop\ordenacao\obj\Debug\net8.0\ref\ordenacao.dll
