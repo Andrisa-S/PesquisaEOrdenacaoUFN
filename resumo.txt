@@ -1,0 +1,222 @@
+4) AGITAÇÃO - Shake sort ou Cocktail
+    - É baseado no Bolha, ou seja, é uma tentativa de melhorar o Bolha
+    - Estável
+    - Memória interna
+    - ...
+
+
+ini = 1
+fim = 5
+
+0   1   2   3   4   5   6
+7   1   4   2   3   9   8
+1   4   2   3   7   8   9
+1   2   4   3   7   8   9
+1   2   3   4   7   8   9
+1   2   3   4   7   8   9
+
+```c#
+void agitacao(List<> lista) {
+    bool houveTroca;
+    int tmp;
+    int ini = 0;
+    int fim = lista.Count;
+    int qtdComparacoes = 0, qtdTrocas = 0;
+
+    do{
+        houveTroca = False;
+        for (int i = 0; i < fim-1; i++){
+            qtdComparacoes++;
+            if (lista[i] > lista [i+1]){
+                qtdTrocas++;
+                houveTroca = True;
+                tmp = lista [i];
+                lista[i] = lista [i+1];
+                lista[i+1] = tmp;
+            }
+        }
+
+        if (!houveTroca){
+            break;
+        }
+        fim--;
+
+        houveTroca = False;
+        for (int i = fim; i > ini+1; i--){
+            qtdComparacoes++;
+            if (lista[i] < lista [i-1]){
+                qtdTrocas++;
+                houveTroca = True;
+                tmp = lista [i];
+                lista[i] = lista [i-1];
+                lista[i-1] = tmp;
+            }
+        }
+        ini++;
+
+    } while (houveTroca);
+}
+```
+
+```java
+void agitacao(List<> lista) {
+    boolean houveTroca;
+    int tmp;
+    int ini = 0;
+    int fim = lista.size();
+    int qtdComparacoes = 0, qtdTrocas = 0;
+
+    do{
+        houveTroca = false;
+        for (int i = 0; i < fim-1; i++){
+            qtdComparacoes++;
+            if (lista.get(i) > lista.get(i+1)){
+                qtdTrocas++;
+                houveTroca = True;
+                tmp = lista .get(i);
+                lista.set(i, lista.get(i+1));
+                lista.set(i+1, tmp);
+            }
+        }
+
+        if (!houveTroca){
+            break;
+        }
+        fim--;
+
+        houveTroca = false;
+        for (int i = fim; i > ini+1; i--){
+            qtdComparacoes++;
+            if (lista.get(i) < lista.get(i-1)){
+                qtdTrocas++;
+                houveTroca = True;
+                tmp = lista .get(i);
+                lista.set(i, lista.get(i+1));
+                lista.set(i+1, tmp);
+            }
+        }
+        ini++;
+
+    } while (houveTroca);
+}
+```
+
+5) PENTE - Comb sort
+    -É baseado no Bolha,, ou seja, é uma tentativa de melhorar o Bolha.
+
+    ATENÇÃO: a partir deste método, há COMPARAÇÕES a uma distância X. Isso gera uma pré-organização de comparações e trocas
+
+    Instável
+    Memória interna
+    A estrutura possui 2 porções/partes (1ª é a ordenada; 2ª é a desordenada)
+
+    Há variáveis  clássicas do bolha: i, houveTroca, tmp.
+    Há a variável distância que é calculada pelo tamanho da estrutura dividido por 1.3
+
+    Adequado somente para listas ou estruturas printas tipo lista de uma linguagem de programação
+
+    n = 7
+    0   1   2   3   4   5   6
+    7   1   4   2   3   9   8   distância = (int)n / 1.3 = 5
+    7   1   4   2   3   9   8   distância = (int) distância / 1.3 = 3
+    2   1   4   7   3   9   8   distância = (int) distância / 1.3 = 2
+    2   1   3   7   5   9   8   distância = (int) distância / 1.3 = 1
+    1   2   3   4   7   8   9   distância = (int) distância / 1.3 = 1
+    1   2   3   4   7   8   9
+
+```c#
+void pente(List<> lista) {
+    bool houveTroca;
+    int tmp;
+    int distancia = lista.Count();
+    int qtdComparacoes = 0, qtdTrocas = 0;
+
+    do{
+        distancia = (int) distancia / 1.3;
+        if(distancia < 1){
+            distancia = 1;
+        }
+        houveTroca = false;
+        for (int i = 0; i+distancia < lista.Count(); i++){
+            qtdComparacoes++;
+            if (lista[i] > lista[i+distancia]){
+                qtdTrocas++;
+                houveTroca = True;
+                tmp = lista[i];
+                lista[i] = lista[i+distancia];
+                lista[i+distancia] = tmp;
+            }
+        }
+    } while (houveTroca || distancia > 1);
+}
+```
+
+```java
+void pente(List<> lista) {
+    boolean houveTroca;
+    int tmp;
+    int distancia = lista.size();
+    int qtdComparacoes = 0, qtdTrocas = 0;
+
+    do{
+        distancia = (int) distancia / 1.3;
+        houveTroca = false;
+        for (int i = 0; i+distancia < lista.size(); i++){
+            qtdComparacoes++;
+            if (lista.get(i) > lista[i+distancia]){
+                qtdTrocas++;
+                houveTroca = True;
+                tmp = lista.get(i);
+                lista.set(i, i+distancia);
+                lista.set(i+distancia, tmp);
+            }
+        }
+    } while (houveTroca || distancia > 1);
+}
+```
+
+6) SHELLSORT 
+É baseado no Inserção, ou seja, é uma tentativa de melhoria via o uso da ANÁLISE A DISTÂNCIA (tipo pente)
+Instável 
+Memória Interna
+
+Não é adequado para listas encadeadas
+n = 7
+    0   1   2   3   4   5   6
+    7   1   4   2   3   9   8   distância = 4
+    3   1   4   2   7   9   8
+
+
+```c#
+void shell(List<> lista){
+    int i, j;
+    int tmp;
+    int qtdComparacoes = 0, qtdTrocas = 0;
+    int distancia = 1;
+
+    int referenciaTamanho = 3;
+
+    do{
+        distancia = referenciaTamanho * distancia + 1;
+    } while (distancia < n);
+    /* n = 100
+    referenciaTamanho = 3
+    distancia = 3*1+1 = 4
+
+    do {
+        distancia = (int) distancia / referenciaTamanho;
+
+        for (i = distancia, i < n, i++){
+            tmp = vetor[i];
+            for (j = i - distancia; j >= 0, j = j - distancia){
+                qtdComparacoes++;
+                if (tmp < vetor[j]){
+                    vetor[j + distancia] = vetor[j];
+                    qtdTrocas++;
+                } else break;
+            }
+            vetor[j + distancia] = tmp;
+            qtdTrocas++;
+        }
+    } while (distancia > 1);
+}
