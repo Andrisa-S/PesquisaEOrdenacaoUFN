@@ -87,8 +87,25 @@
 
     - Na sua linguagem de preferência, implemente (sem consulta) seu método escolhido para saber.
 
+## Aula Semana 7
+    - PRINCÍPIO DIVIDIR PARA CONQUISTAR
+        - Características clássicas/comuns:
+            - RECURSÃO: chamada do próprio método. Vantagem: simplificidade no código; Desvantagem: consumo excessivo de memória RAM
+            - a cada processo de recursão, tanto quick quanto merge dividem o vetor/estrutura como se fossem folhas de uma árvore
+            - ambos os métodos, na recursão, mais precisamente no empilhamento, eles dividem as estruturas. Porém, na volta do empilhamento, no retorno da resursão que ocorre a ordenação
+        - Quicksort
+            - C# implementa seu sort com ele
+            - usa uma variável chamada PIVO para repartir/dividir (recursivo), em que os menores devem estar a sua esquerda, enquanto os maiores a sua direita
+        - Mergesort
+            - Java implementa seu sort com ele
+            - usa 3 variáveis: ini (que marca o lado esquerdo), fim (que marca o lado direito) e o meio
+            
+    - Heapsort
+        - Baseado na filosofia de árvore...
+
 - Como ordenar pela segunda ou pela terceira chave
       Exemplo uma lista de Alunos (codigo, curso, nome) - ordenar por curso e ordenar por nome
 
 - EXERCÍCIO
     - Na sua linguagem de preferência, reescreva o código abaixo para ordenar em um dos métodos estudados usando como chave de ordenação 1 o nome do curso e como chave de ordenação 2 
+
