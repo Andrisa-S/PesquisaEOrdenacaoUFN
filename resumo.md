@@ -650,7 +650,7 @@ Baseado na seleção, tem um desempenho em tempo de execução muito bom em conj
     15   7    4    8    12   1    3
     4    8    1    15   12   7    3
     1    8    3    15   12   7    4    - Heap máximo ou heap mínimo
-    4    15   7    8    12   1    3
+    4    15   7    8    12   1    3    FE = R * 2 + 1    FD = R * 2 + 2
     4    1    15   8    12   7    3
     4    1    3    8    12   7    15
     1    3    4    8    12   7    15
@@ -718,6 +718,7 @@ public static void heapSort(int[] vetor){
 ```
     
     
+
 
 
 
