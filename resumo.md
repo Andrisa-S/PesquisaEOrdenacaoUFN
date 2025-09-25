@@ -604,4 +604,80 @@ void quickSort(int vetor[], int ini, int fim) { //método recurisivo baseado em 
     def particiona(vetor[], ini, fim)
 ```
         
-   
+8)HEAPSORT
+Baseado na seleção, tem um desempenho em tempo de execução muito bom em conjuntos ordenados aleatoriamente.
+    Estabilidade: instável
+    Complexidade: O (n log n)
+    O heapsort utiliza uma estrutura de dados chamada heap, para ordenar os elementos à medida que os insere na estrutura. Assim, ao final das inserções, os elementos podem ser sucessivamente removidos da raiz da heap, na ordem desejada, lembrando-se sempre de manter a propriedade de max-heap.
+    A heap pode ser representada como uma árvore (uma árvore binária com propriedades especiais[1]) ou como um vetor. Para uma ordenação decrescente, deve ser construída uma heap mínima (o menor elemento fica na raiz). Para uma ordenação crescente, deve ser construído uma heap máxima (o maior elemento fica na raiz).
+
+    R = raiz
+    FE = Filho da esquerda    FE = R * 2
+    FD = Filho da direita     FD = R * 2 + 1
+
+    1    2    3    4    5    6    7
+    15   7    4    8    12   1    3
+    4    8    1    15   12   7    3
+    1    8    3    15   12   7    4    - Heap máximo
+
+```C
+void heapsort(int a[], int n) {
+   int i = n / 2, pai, filho, t;
+   while(true) {
+      if (i > 0) {
+          i--;
+          t = a[i];
+      } else {
+          n--;
+          if (n <= 0) return;
+          t = a[n];
+          a[n] = a[0];
+      }
+      pai = i;
+      filho = i * 2 + 1;
+      while (filho < n) {
+          if ((filho + 1 < n)  &&  (a[filho + 1] > a[filho]))
+              filho++;
+          if (a[filho] > t) {
+             a[pai] = a[filho];
+             pai = filho;
+             filho = pai * 2 + 1;
+          } else {
+             break;
+          }
+      }
+      a[pai] = t;
+   }
+}
+```
+
+```Java
+public static void heapSort(int[] vetor){
+        int tamanho = vetor.length;
+        int i = tamanho / 2, pai, filho, t;
+        while (true){
+            if (i > 0){
+                i--; t = vetor[i];
+            }else{
+                tamanho--;
+                if (tamanho <= 0) {return;}
+                t = vetor[tamanho];
+                vetor[tamanho] = vetor[0];
+            }
+            pai = i;
+            filho = ((i * 2) + 1);
+            while (filho < tamanho){
+                if ((filho + 1 < tamanho) && (vetor[filho + 1] > vetor[filho])) {filho++;}
+                if (vetor[filho] > t){
+                    vetor[pai] = vetor[filho];
+                    pai = filho;
+                    filho = pai * 2 + 1;
+                }else {break;}
+            }
+            vetor[pai] = t;
+        }
+    }
+```
+    
+    
+
