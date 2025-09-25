@@ -107,5 +107,16 @@
       Exemplo uma lista de Alunos (codigo, curso, nome) - ordenar por curso e ordenar por nome
 
 - EXERCÍCIO
-    - Na sua linguagem de preferência, reescreva o código abaixo para ordenar em um dos métodos estudados usando como chave de ordenação 1 o nome do curso e como chave de ordenação 2 
+    - Na sua linguagem de preferência, reescreva o código abaixo para ordenar em um dos métodos estudados usando como chave de ordenação 1 o nome do curso e como chave de ordenação 2
+ 
+## Aula Semana 8
+    Prova
+
+## Aula Semana 9
+    - Correção da prova
+    1) Desafio:
+        - Método recebe uma lista de inteiros e retorna:
+            true - se lista em heap máximo
+            false - se lista não em heap máximo
+
 
