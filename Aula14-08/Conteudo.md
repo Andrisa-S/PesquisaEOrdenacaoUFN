@@ -119,4 +119,39 @@
             true - se lista em heap máximo
             false - se lista não em heap máximo
 
+## Aula Semana 10
+    - Pesquisa sequencial
+    - Pesquisa digital
+    - Pesquisa binária
 
+## Aula Semana 11
+    - Java Swing: eventos keypressed, keyreleased, keytyped
+    - Trabalho sobre pesquisa digital
+
+## Aula Semana 12
+    - Correção do trabalho Java Gráfico Benchmark Ordenação
+
+## Aula Semana 13
+    - Tabelas hash e função de espalhamento (endereçamento)
+
+## Aula Semana 14
+    - Revisão geral: Pesquisa
+    - Pesquisa:
+        - o que é e para que serve?
+            - Localizar: indexOf, contains, in
+            - Recuperar: 
+                - Indexação ~= índices {                             / - Remissivo = "Etiquetação"
+                   > Etiquetação              "apontador" de conteúdo 
+                    + Tabela hash                                    \ - Analítico
+        - Complexidade das pesquisas:
+            - Sequencial 0(n)
+            - Binária 0(log n) - única que importa a ordenação
+            - Digital 0(n)
+            - Hash 0(1)
+        - Fluxo: armazenar, "ordenar" e pesquisar
+        - Saber os algoritmos:
+            - Pesquisa binária
+            - Pesquisa digital
+        - Teoria de tabelas hash
+            - tabela
+            - função hash de endereçamento
