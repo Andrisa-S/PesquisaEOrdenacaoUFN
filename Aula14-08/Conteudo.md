@@ -155,3 +155,20 @@
         - Teoria de tabelas hash
             - tabela
             - função hash de endereçamento
+
+## Aula Semana 15
+    Avaliação Teórica
+
+## Aula Semana 16
+    Desafio da Telefonia
+    Descrição da situação:
+        1) Há um arquivo de log (telephony_sessions.txt) com números de telefone celular mais dados da sessão de um cliente da operadora. Por exemplo:
+        5592914942603;{"session_id": "55b11c84-72fe-47b1-a133-19bdb83ff328", "imsi": "433218196001338", "imei": "908386379402654", "mcc": "724", "mnc": "20", "cell_id": 226772, "lac": 62732, "bearer": "3G", "start_time": "2025-11-05T05:56:01Z", "end_time": "2025-11-05T07:37:16Z", "duration_s": 6075, "ip_addr": "10.52.47.98", "sip_call_id": "ad3c10a6-d0c6-4315-8fcd-713d54ed60b8", "codec": "AMR-WB", "bytes_up": 3011337, "bytes_down": 23082477, "lat": -10.058411, "lon": -41.714869, "encryption": "AES"}
+
+        2) Construa um programa em modo texto (ou gráfico em Java se preferir), orientado a objetos que:
+            a) carregue a base de informações das sessões de telefones (telephony_sessions.txt)
+            b) armazene essa base em uma estrutura de dados do tipo HashSet
+            c) cada par: número do ceclular (String) e dados da sessão (String), deve ser convertido em um objeto a ser armazenado no HashSet, sendo que o número do celular é a chave para o cálculo de endereçamento
+            d) tenha uma funcionalidade em que o usuário entra com o número de celular e o programa retorna a string contendo todos os dados da sessão.
+        3) Construa um menu para atender a demanda
+        
