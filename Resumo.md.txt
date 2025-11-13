@@ -1,0 +1,5 @@
+#Árvores B (B-Tree)
+
+- Formadas por n índices, de n+1 nichos e n+1 ponteiros.
+O dado do meio (ex.: 1 3 *6* 8 10 ordem 5) é puxado pra cima, formando um novo nicho, com ponteiros para esquerda e para direita, sendo números menores e maiores, respectivamente.
+- É utilizado para paginação, pois reduz o tamanho e memória ocupada pelos dados 
